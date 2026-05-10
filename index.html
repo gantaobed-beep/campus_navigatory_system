@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Navigation System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    <header>
+        <div class="header-info">
+            <h1>Campus<span>Nav</span></h1>
+            <p>Project by: Ganta Obed & Kushagra Upadhyay</p>
+        </div>
+        <button id="scan-qr-btn">Scan Room QR</button>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="location-search" placeholder="Search buildings or offices...">
+                <div id="search-results" class="results-dropdown"></div>
+            </div>
+            
+            <div id="info-panel" class="info-card">
+                <h3 id="target-name">Campus Facilities</h3>
+                <p id="target-desc">Search for a location or scan a QR code to begin navigation.</p>
+                <div id="nav-instructions"></div>
+            </div>
+        </aside>
+
+        <div id="map"></div>
+    </div>
+
+    <div id="qr-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Scan QR Code</h2>
+            <p>Point your camera at a room QR code to locate it instantly.</p>
+            <div id="qr-reader"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
